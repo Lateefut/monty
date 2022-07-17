@@ -1,72 +1,23 @@
-#Getting input from user and printing it
-,>,
+# BrainF*ck Script to multiply two numbers
+# Result has to be less than 10 (a single digit number)
 
-#Setting the 48 to be removed from first argument
+# given example 42: 4 will be in block #1 2 will be in block #2
+# block 0 will store the result
+# block 1 will hold the value to multiply
+# block 2 will hold the amount of times to multiply
+# the result of an input of 42 will output the result of 4*2
 
-#Set 6 to position 3
->>++++++++
+# read into block 1 and 2
+# subtract 48 from each: '0'
+# loop while block 2 != 0 adding the value of block 1 to block 0 every time
 
-#Multiply an set #2 to 48 and print
-[<++++++>-]<
+# BLOCK 0	BLOCK 1		BLOCK 2		BLOCK 3 	BLOCK4
+# 0		4		1		0 		
 
-#Substracting 48 from #0
-[<<->>-]
+>,------------------------------------------------ # read into #1
+>,------------------------------------------------ # read into #2
+[<[>>+<<<+>-]>>[<<+>>-] COPY BLOCK 1 INTO BLOCK 3 AND 0 THEN COPY BLOCK 3 BACK TO BLOCK 1
+<-] MOVE BLOCK TO BLOCK 2 AND DECREASE (DONE WITH ONE ITERATION)
 
-#Set 6 to position 3
->++++++++
-
-#Multiply an set #2 to 48 and print
-[<++++++>-]<
-
-#Substracting 48 from #1
-[<->-]<
-
-#Setting pointer to 0 position
-<
-
-#init loop n times given by #0
-[
-
-#Pointing to #1 add 1 to #2 and 1 to #3 by #1 times
->[>+>+<<-]
-
-#Pointing to #2 and reversing #1 to it's original value
->[<+>-]<<-]
-
-#Pointing to #3 and print
->>>
-
-#Mov result to #0
-[<<<+>>>-]<<<
-
-#Copy #0 to #1
-[>+>+<<-]>>[<<+>>-]<<
-
-#push #4 10
->>>>++++++++++<<<
-#Loop in #1 end in #0
-[>[-]>>[>+<<<+<->>>-]<+>>[<+>-]<<<<-]<
-
-#clear #0 #1
-[-]>[-]
-
-#move #3 to #0 and #2 to #1
->>[<<<+>>>-]
-<[<+>-]
-
-
-#clear #0 #1
-
-#pointer in #1
-#pointer in #3 clearing
->>[-]
-++++++
-#multiplying 6 times 8 setting value un #2
-[<++++++++>-]
-#pointer in #2 adding 48 to #0 and #3 adding 48 to #1
-<
-
-[<<+>+>-]
-
-<<.
->.
+# MOVE TO BLOCK 0 AND INCREASE BY ASCII '0' (DEC 48)
+<<++++++++++++++++++++++++++++++++++++++++++++++++.
