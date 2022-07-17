@@ -13,7 +13,7 @@
  * struct monty_s - Monty global variables used
  * @line: Integer number of line
  * @buff: The file content
- * @fd: The file
+ * @fd: The files
  * @arg: The args
  */
 typedef struct monty_s
