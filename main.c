@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * main - check the code.
+ * main - check the codes thoroughly.
  * @argc: The number of vars
  * @argv: The var values
  * Return: Always 0.
