@@ -1,6 +1,6 @@
 #include "monty.h"
 /**
- * main - check the code for Holberton School students.
+ * main - check the code.
  * @argc: The number of vars
  * @argv: The var values
  * Return: Always 0.
